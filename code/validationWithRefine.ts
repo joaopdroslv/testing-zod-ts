@@ -28,8 +28,7 @@ const result = CustomerSchema.safeParse({
 });
 
 if (!result.success) {
-  console.error(result);
-  console.error(result.error.format());
+  console.error(result.error);
 } else {
   const customer: Customer = result.data;
   console.info(customer);

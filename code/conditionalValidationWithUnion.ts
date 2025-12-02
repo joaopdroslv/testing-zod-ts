@@ -30,8 +30,7 @@ const result = PaymentMethodSchema.safeParse({
 });
 
 if (!result.success) {
-  console.error(result);
-  console.error(result.error.format());
+  console.error(result.error);
 } else {
   const paymentMethod: PaymentMethod = result.data;
   console.info(paymentMethod);
